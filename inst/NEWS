@@ -1,0 +1,25 @@
+CHANGES IN VERSION 0.99.5
+-------------------------------------
+    o Fixes to compilation to pass BiocCheck.
+
+CHANGES IN VERSION 0.99.4
+-------------------------------------
+    o Changed R package dependency to htmltools, resulting in modifications to initSankey(), drawSankey(), and writeSankey() functions.
+
+CHANGES IN VERSION 0.99.3
+-------------------------------------
+    o Modified colour assignment rules to be more intuitively scaled. 
+    o Added additional makeSankey parameters to allow for path colouring with a defined threshold/cutoff.
+    o Updated examples to use package data. 
+
+CHANGES IN VERSION 0.99.2
+-------------------------------------
+    o Added 'ovca' dataset
+
+CHANGES IN VERSION 0.99.1
+-------------------------------------
+    o Remove a package dependency
+
+CHANGES IN VERSION 0.99.0
+-------------------------------------
+    o First submission to Bioc-devel
