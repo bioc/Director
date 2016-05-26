@@ -31,7 +31,7 @@ pkg.env$dependencies <- list(css=NULL, layout=NULL, d3=NULL, sankey=NULL)
 #' @import utils
 #' @import grDevices
 #' @examples
-#' initSankey("temp") # Creates a temp folder to output HTML files and necesary dependencies.
+#' initSankey() # Generates supporting JavaScript and CSS files.
 initSankey <- function(pathOpacity=0.2, pathHover=0.5, font="lato, helvetica, sans-serif", fontsize=NULL, fontsizeProportion=TRUE, d3js=NULL, sankeyjsFile=NULL, d3jsMethod="auto", sankeyjsMethod="auto") {
 
     if (is.null(fontsize)) {

@@ -35,7 +35,7 @@ global JavaScript and CSS files.
 Internally generates supporting JavaScript and CSS files.
 }
 \examples{
-initSankey("temp") # Creates a temp folder to output HTML files and necesary dependencies.
+initSankey() # Generates supporting JavaScript and CSS files.
 }
 \keyword{download}
 \keyword{sankey}
