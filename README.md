@@ -21,7 +21,7 @@ between molecules (e.g. correlation, affinity score).
 Quantitative values are used to render the diagram. Molecules with strong quantitative values,
 multiple and strong interactions are automatically emphasized in the diagram. A
 connected series of such molecules would, in turn, identify potentially
-interesting regulatory cascades – visual information not as easily nor
+interesting regulatory cascades -- visual information not as easily nor
 intuitively conveyed with standard network approaches.
 
 ## Get it
