@@ -1,0 +1,18 @@
+citEntry(entry="article",
+         title = "Dynamic visualization of multi-level molecular data: The Director package in R",
+         author = personList( as.person("Katherine Icay"), 
+                              as.person("Chengyu Liu"), 
+                              as.person("Sampsa Hautaniemi")),
+         year = 2018,
+         journal = "Comput Methods Programs Biomed",
+         volume = "153",
+         pages = "129--136",
+         month = "Jan",
+         doi = "10.1016/j.cmpb.2017.10.013",
+         url = "https://www.sciencedirect.com/science/article/pii/S0169260716306964",
+         
+         textVersion = 
+         paste("Icay, K.  and Liu, C.  and Hautaniemi, S. (2018):", 
+               "Dynamic visualization of multi-level molecular data: The Director package in R",
+                "Comput Methods Programs Biomed 153: 129--136" ) )
+

@@ -9,7 +9,7 @@ files, making them highly portable and eliminating the need for third-party soft
 enables a straightforward approach for scientists to interpret the data produced, and bioinformatics
 developers an alternative means to present relevant data.
 
-![Director diagram example](https://raw.githubusercontent.com/kzouchka/Director/master/vignettes/figure4.png)
+![Director diagram example](https://raw.githubusercontent.com/kzouchka/Director_old/master/vignettes/figure4.png)
 
 ## How it works
 Two types of quantitive information are all that's needed to render the diagram: values for nodes and values for
@@ -26,3 +26,14 @@ intuitively conveyed with standard network approaches.
 
 ## Get it
 Package installation instructions for R are found on [http://kzouchka.github.io/Director/](http://kzouchka.github.io/Director/)
+
+## How to cite
+Icay, K.  and Liu, C.  and Hautaniemi, S. (2018)
+
+Dynamic visualization of multi-level molecular data: The Director package in R
+
+Comput Methods Programs Biomed 153: 129--136
+
+10.1016/j.cmpb.2017.10.013
+
+[https://www.sciencedirect.com/science/article/pii/S0169260716306964]
