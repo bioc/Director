@@ -1,6 +1,6 @@
 Package: Director
 Title: A dynamic visualization tool of multi-level data
-Version: 1.7.3
+Version: 1.8.0
 Author: Katherine Icay [aut, cre]
 Maintainer: Katherine Icay <katherine.icay@helsinki.fi>
 Description: Director is an R package designed to streamline the
