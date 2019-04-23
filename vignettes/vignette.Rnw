@@ -34,7 +34,7 @@ Sankey diagrams are types of flow diagrams comprised of paths and nodes designed
 Dynamic visualization of data is achieved with the Sankey plugin of Mike Bostock's JavaScript library, \href{http://d3js.org/}{D3}. Compared to traditional Sankey diagrams, this package provides novel drawing capabilities to better depict molecular interactions. By enabling input for both path and node values, colours are meaningfully assigned according to a gradient scale rather than being assigned randomly or uniformly. Furthermore, in molecular biology, both positive and negative measurement values are of interest and thus both extremes are scaled for when drawing path widths.
 
     \subsection{Limitations}
-Sankey diagrams are strictly directional flow diagrams and are not suitable for depicting feedback loops (i.e. a path from one node that leads back to itself). Order of input is also important: \textit{all} upstream connections must precede downstream connections to successfully draw the diagram. For example, a list must contain all miRNA-mRNA pairs first, mRNA-gene pairs second. This package will check input values and notify user if any feedback loops exist. While rendering an actual loop is possible manually, it is currently not possible as an automatic process in this package. The solution is thus to create a new node. An example is provided under subsection \textit{\hyperref[loop]{What's being visualized?}}
+Sankey diagrams are strictly directional flow diagrams and are not suitable for depicting feedback loops (i.e. a path from one node that leads back to itself). Order of input is also important: \textit{all} upstream connections must precede downstream connections to successfully draw the diagram. For example, a list must contain all miRNA-mRNA pairs first, mRNA-gene pairs second. This package will check input values and notify user if any feedback loops exist. While rendering an actual loop is possible manually, it is currently not possible as an automatic process in this package. The solution is thus to create a new node. An example is provided under subsection \textit{What's being visualized?}
 
 As with all data-driven diagrams, large datasets can be difficult or impossible to visualize and still be able to distinguish individual nodes and paths. While this package does not restrict the amount of paths and nodes defined, it will warn users that the diagram may not be rendered correctly. In most cases, this means less connected paths and nodes may be too small to be rendered at all. In this situation, users have two options: (1) filter the data manually or using the quantitative and qualitative filters of the package, and/or (2) manually define the diagram height and width to be large enough to render all nodes and paths. Instructions on how to perform these actions are described below. 
 
@@ -58,12 +58,12 @@ This is necessary for functions $makeSankey$ and $drawSankey$ to work so it must
 \textit{Director} requires two types of quantitive information as input: values for \textit{nodes} and values for \textit{paths}. The package assumes nodes are molecules of interest and that the quantitative value is the feature which makes them interesting, e.g. expression fold-change, significance value, or methylation score. Similarly, paths represent a predictive or quantitative measure of the interaction between molecules (e.g. correlation, affinity score).
 
 Node and path values can be input in two ways.
-    \begin{enumerate}
-        \item As a single table with each row defining a source node, target node, relationship value, node values, and (optional) descriptive information.
-        \item As two separate tables: one with each row defining a source node, target node, relationship value, and (optional) descriptive values; and another with two columns defining all nodes and corresponding node values.
-    \end{enumerate}
+\begin{enumerate}
+    \item As a single table with each row defining a source node, target node, relationship value, node values, and (optional) descriptive information.
+    \item As two separate tables: one with each row defining a source node, target node, relationship value, and (optional) descriptive values; and another with two columns defining all nodes and corresponding node values.
+\end{enumerate}
 
-\noindent Suppose we have the following information:\\
+Suppose we have the following information:
 \begin{center}
     \begin{tabular}{lllll} \hline
     source & target & impact score & source fold-change & target fold-change\\ \hline
@@ -134,7 +134,8 @@ Basic functions are provided with \textit{Director} to filter the list of source
 Additionally, \textit{Director} has built-in checks to ensure the input data (1) contains unique numerical values for each node and path regardless of the number of connections, and (2) does not contain feedback loops. In both cases, a warning will be given to the user indicating a problem in the rendering of the diagram. An example of the second case is given below:
 
 <<echo=TRUE,print=FALSE>>=
-table1_v2 <- rbind(table1, # add to the example two transcript->gene->transcript loops
+table1_v2 <- rbind(table1, 
+    # add to the example two transcript->gene->transcript loops
     data.frame(source=c("gene1", "gene2"),
     target=c("transc1", "transc2"),
     value=c(0.3, -0.8),
@@ -181,8 +182,7 @@ By default, this package assumes larger absolute values are stronger than smalle
     \subsubsection{\textit{averagePath} parameter}
 What if there is no unique path values after the first level of interacting nodes? What if interest is only in the downstream effect of the first level of interactions (e.g. drugs and their molecular targets)? $makeSankey$ has a Boolean parameter called \textit{averagePath} that, when set to $TRUE$, will replace the \textit{List\$value} of a source-target pair of molecules (say, miRNA-1 and target Gene A) with an average value of the incoming paths to the source molecule (say, Drug X and Drug Y targeting miRNA-1). Assuming a uniform downstream effect, this colours downstream paths in the figure based on the average effect of the initial level of source-target values. Consequently, this gives more emphasis to the quantitative node values.
 
-<<echo=TRUE,print=FALSE>>=
-initSankey()
+<<echo=FALSE,print=FALSE>>=
 sankey2 <- makeSankey(tempList2, averagePath=TRUE)
 sankey2d <- drawSankey(sankey2)
 @
@@ -224,12 +224,13 @@ Fortunately, users can view quantitative and qualitative information, including 
 When any part of the List information is modified, $makeSankey$ needs to be rerun to update colour assignments (quantitative values), nodes, and path connections. Changes to the general appearance of the figure can be made with parameters in $initSankey$ and $drawSankey$. Details are available in the manual. To update the figure with the changes, simply rerun $drawSankey$. Figure 4 is drawn with the exact same List information as Figure 3 but using non-default parameters.
 
 <<echo=TRUE,print=FALSE>>=
-# Makes the path colours darker by 10%  and uses a single, uniform font size for the figure rather than font sizes proportional to node size.
+# Makes the path colours darker by 10%  and uses a single, uniform font size 
+# for the figure rather than font sizes proportional to node size.
 initSankey(pathOpacity = 0.3, pathHover = 0.6,
     fontsizeProportion = FALSE, fontsize=20)
 
 # Changes the default colours used.
-sankey2 <- makeSankey(tempList2, averagePath=TRUE,
+sankey2 <- makeSankey(tempList2, averagePath=FALSE,
     nodeMin = "orange", nodeMax = "purple", pathMax = "#333333")
 
 # Changes to legend values and overall figure size
