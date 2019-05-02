@@ -146,7 +146,7 @@ tempList_v2 <- createList(table1_v2)
 sankey_loop <- makeSankey(tempList_v2)
 @
 <<echo=TRUE,print=TRUE>>=
-sankey_loop$reference[,c(1:6)] # note the change in target names!
+sankey_loop$reference[,c(1:6)] # $note the change in target names!
 @
 
 The loops are identified as new destination nodes. Continuing with the data visualization will thus produce the following Sankey diagram.
@@ -230,7 +230,7 @@ initSankey(pathOpacity = 0.3, pathHover = 0.6,
     fontsizeProportion = FALSE, fontsize=20)
 
 # Changes the default colours used.
-sankey2 <- makeSankey(tempList2, averagePath=FALSE,
+sankey2 <- makeSankey(tempList2, averagePath=TRUE,
     nodeMin = "orange", nodeMax = "purple", pathMax = "#333333")
 
 # Changes to legend values and overall figure size
