@@ -1,8 +1,7 @@
 Package: Director
 Title: A dynamic visualization tool of multi-level data
-Version: 1.9.5
-Author: Katherine Icay [aut, cre]
-Maintainer: Katherine Icay <kat.icay@gmail.com>
+Version: 1.11.1
+Authors@R: person("Katherine", "Icay", email = "kat.icay@gmail.com", role= c("aut", "cre"))
 Description: Director is an R package designed to streamline the
         visualization of molecular effects in regulatory cascades. It
         utilizes the R package htmltools and a modified Sankey plugin
@@ -17,7 +16,7 @@ Description: Director is an R package designed to streamline the
         relevant data.
 URL: https://github.com/kzouchka/Director
 BugReports: https://github.com/kzouchka/Director/issues
-Depends: R (>= 3.3)
+Depends: R (>= 4.0)
 License: GPL-3 + file LICENSE
 biocViews: Visualization
 LazyData: true
