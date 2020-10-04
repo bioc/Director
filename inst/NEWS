@@ -1,42 +1,35 @@
+CHANGES IN VERSION 1.15.3 (2020-10-04)
++ Updated DESCRIPTION and NEWS formatting.
+
 CHANGES IN VERSION 1.11.1
--------------------------------------
-    o Updated DESCRIPTION
++ Updated DESCRIPTION
 
 CHANGES IN VERSION 1.7.3
--------------------------------------
-    o Added citation
++ Added citation
 
 CHANGES IN VERSION 1.3.1
--------------------------------------
-    o Improved notice of discovered feedback loops.
-    o Added example input with feedback loop to manual.
++ Improved notice of discovered feedback loops.
++ Added example input with feedback loop to manual.
 
 CHANGES IN VERSION 0.99.6
--------------------------------------
-    o Fixed example of function initSankey.
++ Fixed example of function initSankey.
 
 CHANGES IN VERSION 0.99.5
--------------------------------------
-    o Fixes to compilation to pass BiocCheck.
++ Fixes to compilation to pass BiocCheck.
 
 CHANGES IN VERSION 0.99.4
--------------------------------------
-    o Changed R package dependency to htmltools, resulting in modifications to initSankey(), drawSankey(), and writeSankey() functions.
++ Changed R package dependency to htmltools, resulting in modifications to initSankey(), drawSankey(), and writeSankey() functions.
 
 CHANGES IN VERSION 0.99.3
--------------------------------------
-    o Modified colour assignment rules to be more intuitively scaled. 
-    o Added additional makeSankey parameters to allow for path colouring with a defined threshold/cutoff.
-    o Updated examples to use package data. 
++ Modified colour assignment rules to be more intuitively scaled. 
++ Added additional makeSankey parameters to allow for path colouring with a defined threshold/cutoff.
++ Updated examples to use package data. 
 
 CHANGES IN VERSION 0.99.2
--------------------------------------
-    o Added 'ovca' dataset
++ Added 'ovca' dataset
 
 CHANGES IN VERSION 0.99.1
--------------------------------------
-    o Remove a package dependency
++ Remove a package dependency
 
 CHANGES IN VERSION 0.99.0
--------------------------------------
-    o First submission to Bioc-devel
++ First submission to Bioc-devel
