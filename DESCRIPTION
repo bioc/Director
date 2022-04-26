@@ -1,6 +1,6 @@
 Package: Director
 Title: A dynamic visualization tool of multi-level data
-Version: 1.22.0
+Version: 1.23.0
 Authors@R: person("Katherine", "Icay", email = "kat.icay@gmail.com", role= c("aut", "cre"))
 Description: Director is an R package designed to streamline the
         visualization of molecular effects in regulatory cascades. It
